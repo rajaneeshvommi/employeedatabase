@@ -1,0 +1,39 @@
+/**
+ * Created by root on 2015-12-02.
+ */
+angular.module('LoginApp', [])
+    .controller('Login', function($scope, $http) {
+
+ $scope.CheckLogin = function (login){
+if ( login.username == "admin" && login.password == "admin"){
+                //alert ("Login successful");
+                window.location = "add.html";
+
+            }
+            else{
+
+                alert ("Login failed");
+
+            }
+      
+}
+    });
+
+angular.module('todoApp', [])
+    .controller('LoginCtrl', function($scope, $http) {
+
+   $scope.Login = function (login){
+
+           
+            $http.put('/api/login', login).then(function(response) {
+                refreshAllNotes();
+            });
+        }
+
+
+        function refreshAllNotes() {
+            $http.get('/api/login').then(function(response) {
+                $scope.login = response.data;
+            });
+        }
+   });

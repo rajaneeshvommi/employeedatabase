@@ -1,0 +1,134 @@
+<html>
+<html lang="se" ng-app="todoApp" >
+<head>
+	<meta charset="utf-8">
+	<title>Employee Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<title></title>
+
+	<script type="text/javascript" src="js\bootstrap.min.js"></script>
+	<script type="text/javascript" src="js\jquery.min.js"></script>
+	<!--<script type="text/javascript" src="js\angular.min.js"></script>-->
+	<script type="text/javascript" src="js\angular-route.min.js"></script>
+	<script type="text/javascript" src="js\controller.js"></script>
+
+	<title></title>
+</head>
+<!--<body ng-controller="LoginCtrl">-->
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<div class="collapse navbar-collapse" id="nav-toggle">
+		<ul class="nav navbar-nav">
+			<li><a href="home.html">Home</a></li>
+			<li class="active"><a href="add.html">Registration</a></li>
+		</ul>
+		<form class="navbar-form navbar-right">
+			<li><a href="home.html">Line Manager</a></li>
+		</form>
+		<form class="navbar-form navbar-right">
+			<li><a href="index.html">Log out</a></li>
+		</form>
+	</div>
+</nav>
+
+<div class="container" ng-controller="LoginCtrl">
+	<h1>New Employee Registration</h1><br><br>
+	<form class="form-horizontal">
+		<div class="row" >
+			<div class="col-sm-6">
+
+				<div class="form-group">
+					<label for="name" class="col-sm-4 control-label"> First Name</label>
+					<div class="col-sm-8">
+						<input type="text" id="name" class="form-control" placeholder="Enter First Name" ng-model="login.firstname" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="name" class="col-sm-4 control-label"> Last Name</label>
+					<div class="col-sm-8">
+						<input type="text" id="name" class="form-control" placeholder="Enter Last Name" ng-model="login.lastname" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="phone" class="col-sm-4 control-label">Personel Number</label>
+					<div class="col-sm-8">
+						<input type="number" id="phone" class="form-control" placeholder="Enter SSN" ng-model="login.ssnnumber" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="phone" class="col-sm-4 control-label">Phone Number</label>
+					<div class="col-sm-8">
+						<input type="number" id="phone" class="form-control" placeholder="Mobile/Landline" ng-model="login.phone" required>
+					</div>
+				</div>
+				<!--
+				<div class="form-group">
+					<label for="phone" class="col-sm-4 control-label">Date</label>
+					<div class="col-sm-8">
+						<input type="date" id="date" class="form-control" ng-model="login.date"required>
+					</div>
+				</div>
+-->
+
+			</div>
+
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="address" class="col-sm-4 control-label">Address</label>
+					<div class="col-sm-8">
+						<textarea id="address" class="form-control"  placeholder="Contact Adress With PIN code" ng-model="login.address" required></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="name" class="col-sm-4 control-label"> Employye Type</label>
+					<div class="col-sm-8">
+						<input type="text" id="name" class="form-control" placeholder="Intern/Contract/Permanent" ng-model="login.type"  required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="col-sm-4 control-label">Email Address</label>
+					<div class="col-sm-8">
+						<input type="email" id="email" class="form-control" placeholder="e-Mail ID" ng-model="login.mail" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-sm-4 control-label"> Line Manager</label>
+					<div class="col-sm-8">
+						<input type="text" id="name" class="form-control" placeholder="Line Manager" ng-model="login.linemanager" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="notes" class="col-sm-4 control-label">Notes</label>
+					<div class="col-sm-8">
+						<textarea id="notes" class="form-control" ng-model="login.notes"></textarea>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="form-actions">
+			<div class="col-sm-offset-6 col-sm-4">
+				<input type="submit" class="btn btn-primary" value="Add Employee" ng-click="CheckLogin(login);login={}">
+			</div>
+		</div>
+
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/note.js"></script>
+</div>
+	</body>
+</html>
